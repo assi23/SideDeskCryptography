@@ -10,19 +10,21 @@ namespace Cryptography.WindosForm
         [STAThread]
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build();
+            var host = CreateHostBuilder(args).Build();
+            var serviceProvider = host.Services;
 
             ApplicationConfiguration.Initialize();
-            Application.Run(new SideDeskCryptography(new EncryptService(), new DecryptService()));
+            Application.Run(serviceProvider.GetRequiredService<SideDeskCryptographyForm>());
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args)
             => Host.CreateDefaultBuilder(args)
                     .ConfigureServices((hostcontext, services) =>
                     {
+                        services.AddSingleton<SideDeskCryptographyForm>();
+
                         services.AddScoped<IEncryptService, EncryptService>();
                         services.AddScoped<IDecryptService, DecryptService>();
                     });
-
     }
 }

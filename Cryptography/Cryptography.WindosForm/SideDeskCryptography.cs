@@ -2,13 +2,12 @@ using Cryptography.Domain.Interfaces;
 
 namespace Cryptography.WindosForm
 {
-    public partial class SideDeskCryptography : Form
+    public partial class SideDeskCryptographyForm : Form
     {
         private readonly IEncryptService _encryptService;
         private readonly IDecryptService _decryptService;
 
-
-        public SideDeskCryptography(IEncryptService encryptService, IDecryptService decryptService)
+        public SideDeskCryptographyForm(IEncryptService encryptService, IDecryptService decryptService)
         {
             _encryptService = encryptService;
             _decryptService = decryptService;
