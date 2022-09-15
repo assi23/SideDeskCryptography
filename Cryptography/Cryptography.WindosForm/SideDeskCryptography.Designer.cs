@@ -1,6 +1,6 @@
 ﻿namespace Cryptography.WindosForm
 {
-    partial class SideDeskCryptography
+    partial class SideDeskCryptographyForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SideDeskCryptography));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SideDeskCryptographyForm));
             this.lbInput = new System.Windows.Forms.Label();
             this.lbOutput = new System.Windows.Forms.Label();
             this.tbInput = new System.Windows.Forms.TextBox();
@@ -102,7 +102,7 @@
             this.btnCopy.UseVisualStyleBackColor = true;
             this.btnCopy.Click += new System.EventHandler(this.CopyFromOutput);
             // 
-            // SideDeskCryptography
+            // SideDeskCryptographyForm
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -119,7 +119,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "SideDeskCryptography";
+            this.Name = "SideDeskCryptographyForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SideDesk Cryptography";
             this.ResumeLayout(false);
